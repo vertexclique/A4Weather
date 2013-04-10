@@ -131,6 +131,16 @@ namespace A4Weather.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Visualpharm_Icons8_Metro_Style_Weather_Thermometer {
+            get {
+                object obj = ResourceManager.GetObject("Visualpharm_Icons8_Metro_Style_Weather_Thermometer", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap waning_crescent {
@@ -166,6 +176,16 @@ namespace A4Weather.Properties {
         internal static System.Drawing.Bitmap waxing_gibbous {
             get {
                 object obj = ResourceManager.GetObject("waxing_gibbous", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Weather_Thermometer_icon {
+            get {
+                object obj = ResourceManager.GetObject("Weather_Thermometer_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

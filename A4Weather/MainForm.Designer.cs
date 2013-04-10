@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.gbSettings = new System.Windows.Forms.GroupBox();
+            this.tbTerminal = new System.Windows.Forms.RichTextBox();
             this.cbCity = new System.Windows.Forms.ComboBox();
             this.btnData = new System.Windows.Forms.Button();
             this.btnCompare = new System.Windows.Forms.Button();
@@ -59,11 +61,13 @@
             this.lblCountry = new System.Windows.Forms.Label();
             this.lblState = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.lblWStat = new System.Windows.Forms.Label();
             this.lblDew = new System.Windows.Forms.Label();
             this.lblCode = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblFeelsLike = new System.Windows.Forms.Label();
+            this.pbCurrent = new System.Windows.Forms.PictureBox();
             this.lblTemp = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -86,34 +90,31 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabRadar = new System.Windows.Forms.TabPage();
+            this.pbRadar = new System.Windows.Forms.PictureBox();
             this.tabSatellite = new System.Windows.Forms.TabPage();
+            this.pbSatellite = new System.Windows.Forms.PictureBox();
             this.tabCombined = new System.Windows.Forms.TabPage();
+            this.pbCombined = new System.Windows.Forms.PictureBox();
             this.tabSun = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.lblSunset = new System.Windows.Forms.Label();
+            this.lblSunrise = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbSunRise = new System.Windows.Forms.PictureBox();
             this.tabMoon = new System.Windows.Forms.TabPage();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.lblIlluminate = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.lblMoonAge = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.pbMoon = new System.Windows.Forms.PictureBox();
             this.bgwRadar = new System.ComponentModel.BackgroundWorker();
             this.bgwSatellite = new System.ComponentModel.BackgroundWorker();
             this.bgwCombined = new System.ComponentModel.BackgroundWorker();
             this.bgwCurrent = new System.ComponentModel.BackgroundWorker();
-            this.label23 = new System.Windows.Forms.Label();
-            this.tbTerminal = new System.Windows.Forms.RichTextBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.pbCurrent = new System.Windows.Forms.PictureBox();
-            this.pbRadar = new System.Windows.Forms.PictureBox();
-            this.pbSatellite = new System.Windows.Forms.PictureBox();
-            this.pbCombined = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbSunRise = new System.Windows.Forms.PictureBox();
-            this.pbMoon = new System.Windows.Forms.PictureBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.lblSunrise = new System.Windows.Forms.Label();
-            this.lblSunset = new System.Windows.Forms.Label();
             this.bgwSunMoon = new System.ComponentModel.BackgroundWorker();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.lblMoonAge = new System.Windows.Forms.Label();
-            this.lblIlluminate = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
             this.gbSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -125,21 +126,21 @@
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCurrent)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabRadar.SuspendLayout();
-            this.tabSatellite.SuspendLayout();
-            this.tabCombined.SuspendLayout();
-            this.tabSun.SuspendLayout();
-            this.tabMoon.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCurrent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRadar)).BeginInit();
+            this.tabSatellite.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSatellite)).BeginInit();
+            this.tabCombined.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCombined)).BeginInit();
+            this.tabSun.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSunRise)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMoon)).BeginInit();
+            this.tabMoon.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMoon)).BeginInit();
             this.SuspendLayout();
             // 
             // gbSettings
@@ -157,6 +158,15 @@
             this.gbSettings.TabIndex = 0;
             this.gbSettings.TabStop = false;
             this.gbSettings.Text = "Settings";
+            // 
+            // tbTerminal
+            // 
+            this.tbTerminal.Location = new System.Drawing.Point(7, 182);
+            this.tbTerminal.Name = "tbTerminal";
+            this.tbTerminal.ReadOnly = true;
+            this.tbTerminal.Size = new System.Drawing.Size(250, 274);
+            this.tbTerminal.TabIndex = 3;
+            this.tbTerminal.Text = "TERMINAL";
             // 
             // cbCity
             // 
@@ -518,6 +528,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Condition";
             // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label23.Location = new System.Drawing.Point(7, 220);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(72, 13);
+            this.label23.TabIndex = 7;
+            this.label23.Text = "Weather Icon";
+            // 
             // lblWStat
             // 
             this.lblWStat.AutoSize = true;
@@ -562,6 +582,17 @@
             this.lblFeelsLike.Size = new System.Drawing.Size(30, 13);
             this.lblFeelsLike.TabIndex = 6;
             this.lblFeelsLike.Text = "N/A";
+            // 
+            // pbCurrent
+            // 
+            this.pbCurrent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbCurrent.InitialImage = null;
+            this.pbCurrent.Location = new System.Drawing.Point(147, 201);
+            this.pbCurrent.Name = "pbCurrent";
+            this.pbCurrent.Size = new System.Drawing.Size(50, 50);
+            this.pbCurrent.TabIndex = 0;
+            this.pbCurrent.TabStop = false;
             // 
             // lblTemp
             // 
@@ -788,6 +819,14 @@
             this.tabRadar.Text = "Animated Radar";
             this.tabRadar.UseVisualStyleBackColor = true;
             // 
+            // pbRadar
+            // 
+            this.pbRadar.Location = new System.Drawing.Point(0, 0);
+            this.pbRadar.Name = "pbRadar";
+            this.pbRadar.Size = new System.Drawing.Size(431, 431);
+            this.pbRadar.TabIndex = 0;
+            this.pbRadar.TabStop = false;
+            // 
             // tabSatellite
             // 
             this.tabSatellite.Controls.Add(this.pbSatellite);
@@ -799,6 +838,14 @@
             this.tabSatellite.Text = "Satellite";
             this.tabSatellite.UseVisualStyleBackColor = true;
             // 
+            // pbSatellite
+            // 
+            this.pbSatellite.Location = new System.Drawing.Point(0, 0);
+            this.pbSatellite.Name = "pbSatellite";
+            this.pbSatellite.Size = new System.Drawing.Size(431, 431);
+            this.pbSatellite.TabIndex = 0;
+            this.pbSatellite.TabStop = false;
+            // 
             // tabCombined
             // 
             this.tabCombined.Controls.Add(this.pbCombined);
@@ -808,6 +855,14 @@
             this.tabCombined.TabIndex = 2;
             this.tabCombined.Text = "Combined";
             this.tabCombined.UseVisualStyleBackColor = true;
+            // 
+            // pbCombined
+            // 
+            this.pbCombined.Location = new System.Drawing.Point(0, 0);
+            this.pbCombined.Name = "pbCombined";
+            this.pbCombined.Size = new System.Drawing.Size(435, 431);
+            this.pbCombined.TabIndex = 0;
+            this.pbCombined.TabStop = false;
             // 
             // tabSun
             // 
@@ -819,6 +874,81 @@
             this.tabSun.Text = "Sun Status";
             this.tabSun.UseVisualStyleBackColor = true;
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.lblSunset);
+            this.groupBox6.Controls.Add(this.lblSunrise);
+            this.groupBox6.Controls.Add(this.label25);
+            this.groupBox6.Controls.Add(this.label24);
+            this.groupBox6.Controls.Add(this.pictureBox1);
+            this.groupBox6.Controls.Add(this.pbSunRise);
+            this.groupBox6.Location = new System.Drawing.Point(4, 3);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(425, 425);
+            this.groupBox6.TabIndex = 1;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Sun Status";
+            // 
+            // lblSunset
+            // 
+            this.lblSunset.AutoSize = true;
+            this.lblSunset.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSunset.Location = new System.Drawing.Point(273, 245);
+            this.lblSunset.Name = "lblSunset";
+            this.lblSunset.Size = new System.Drawing.Size(30, 13);
+            this.lblSunset.TabIndex = 2;
+            this.lblSunset.Text = "N/A";
+            // 
+            // lblSunrise
+            // 
+            this.lblSunrise.AutoSize = true;
+            this.lblSunrise.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSunrise.Location = new System.Drawing.Point(87, 245);
+            this.lblSunrise.Name = "lblSunrise";
+            this.lblSunrise.Size = new System.Drawing.Size(30, 13);
+            this.lblSunrise.TabIndex = 2;
+            this.lblSunrise.Text = "N/A";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label25.Location = new System.Drawing.Point(273, 186);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(46, 13);
+            this.label25.TabIndex = 1;
+            this.label25.Text = "Sunset";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label24.Location = new System.Drawing.Point(84, 186);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(49, 13);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "Sunrise";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(232, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pbSunRise
+            // 
+            this.pbSunRise.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbSunRise.BackgroundImage")));
+            this.pbSunRise.InitialImage = null;
+            this.pbSunRise.Location = new System.Drawing.Point(45, 32);
+            this.pbSunRise.Name = "pbSunRise";
+            this.pbSunRise.Size = new System.Drawing.Size(128, 128);
+            this.pbSunRise.TabIndex = 0;
+            this.pbSunRise.TabStop = false;
+            // 
             // tabMoon
             // 
             this.tabMoon.Controls.Add(this.groupBox7);
@@ -828,6 +958,66 @@
             this.tabMoon.TabIndex = 4;
             this.tabMoon.Text = "Moon Stage";
             this.tabMoon.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.lblIlluminate);
+            this.groupBox7.Controls.Add(this.label28);
+            this.groupBox7.Controls.Add(this.lblMoonAge);
+            this.groupBox7.Controls.Add(this.label27);
+            this.groupBox7.Controls.Add(this.pbMoon);
+            this.groupBox7.Location = new System.Drawing.Point(32, 77);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(369, 230);
+            this.groupBox7.TabIndex = 1;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Moon Stage";
+            // 
+            // lblIlluminate
+            // 
+            this.lblIlluminate.AutoSize = true;
+            this.lblIlluminate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblIlluminate.Location = new System.Drawing.Point(182, 76);
+            this.lblIlluminate.Name = "lblIlluminate";
+            this.lblIlluminate.Size = new System.Drawing.Size(30, 13);
+            this.lblIlluminate.TabIndex = 2;
+            this.lblIlluminate.Text = "N/A";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(182, 54);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(118, 13);
+            this.label28.TabIndex = 3;
+            this.label28.Text = "Illuminated Percentage:";
+            // 
+            // lblMoonAge
+            // 
+            this.lblMoonAge.AutoSize = true;
+            this.lblMoonAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMoonAge.Location = new System.Drawing.Point(182, 143);
+            this.lblMoonAge.Name = "lblMoonAge";
+            this.lblMoonAge.Size = new System.Drawing.Size(30, 13);
+            this.lblMoonAge.TabIndex = 1;
+            this.lblMoonAge.Text = "N/A";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(182, 121);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(71, 13);
+            this.label27.TabIndex = 1;
+            this.label27.Text = "Age of Moon:";
+            // 
+            // pbMoon
+            // 
+            this.pbMoon.Location = new System.Drawing.Point(40, 54);
+            this.pbMoon.Name = "pbMoon";
+            this.pbMoon.Size = new System.Drawing.Size(120, 120);
+            this.pbMoon.TabIndex = 0;
+            this.pbMoon.TabStop = false;
             // 
             // bgwRadar
             // 
@@ -849,199 +1039,10 @@
             this.bgwCurrent.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwCurrent_DoWork);
             this.bgwCurrent.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwCurrent_RunWorkerCompleted);
             // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label23.Location = new System.Drawing.Point(7, 220);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(72, 13);
-            this.label23.TabIndex = 7;
-            this.label23.Text = "Weather Icon";
-            // 
-            // tbTerminal
-            // 
-            this.tbTerminal.Location = new System.Drawing.Point(7, 182);
-            this.tbTerminal.Name = "tbTerminal";
-            this.tbTerminal.ReadOnly = true;
-            this.tbTerminal.Size = new System.Drawing.Size(250, 274);
-            this.tbTerminal.TabIndex = 3;
-            this.tbTerminal.Text = "TERMINAL";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.lblSunset);
-            this.groupBox6.Controls.Add(this.lblSunrise);
-            this.groupBox6.Controls.Add(this.label25);
-            this.groupBox6.Controls.Add(this.label24);
-            this.groupBox6.Controls.Add(this.pictureBox1);
-            this.groupBox6.Controls.Add(this.pbSunRise);
-            this.groupBox6.Location = new System.Drawing.Point(4, 3);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(425, 425);
-            this.groupBox6.TabIndex = 1;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Sun Status";
-            // 
-            // pbCurrent
-            // 
-            this.pbCurrent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbCurrent.InitialImage = null;
-            this.pbCurrent.Location = new System.Drawing.Point(147, 201);
-            this.pbCurrent.Name = "pbCurrent";
-            this.pbCurrent.Size = new System.Drawing.Size(50, 50);
-            this.pbCurrent.TabIndex = 0;
-            this.pbCurrent.TabStop = false;
-            // 
-            // pbRadar
-            // 
-            this.pbRadar.Location = new System.Drawing.Point(0, 0);
-            this.pbRadar.Name = "pbRadar";
-            this.pbRadar.Size = new System.Drawing.Size(431, 431);
-            this.pbRadar.TabIndex = 0;
-            this.pbRadar.TabStop = false;
-            // 
-            // pbSatellite
-            // 
-            this.pbSatellite.Location = new System.Drawing.Point(0, 0);
-            this.pbSatellite.Name = "pbSatellite";
-            this.pbSatellite.Size = new System.Drawing.Size(431, 431);
-            this.pbSatellite.TabIndex = 0;
-            this.pbSatellite.TabStop = false;
-            // 
-            // pbCombined
-            // 
-            this.pbCombined.Location = new System.Drawing.Point(0, 0);
-            this.pbCombined.Name = "pbCombined";
-            this.pbCombined.Size = new System.Drawing.Size(435, 431);
-            this.pbCombined.TabIndex = 0;
-            this.pbCombined.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::A4Weather.Properties.Resources.sunset_128;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(232, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pbSunRise
-            // 
-            this.pbSunRise.BackgroundImage = global::A4Weather.Properties.Resources.sunrise_128;
-            this.pbSunRise.InitialImage = null;
-            this.pbSunRise.Location = new System.Drawing.Point(45, 32);
-            this.pbSunRise.Name = "pbSunRise";
-            this.pbSunRise.Size = new System.Drawing.Size(128, 128);
-            this.pbSunRise.TabIndex = 0;
-            this.pbSunRise.TabStop = false;
-            // 
-            // pbMoon
-            // 
-            this.pbMoon.Location = new System.Drawing.Point(40, 54);
-            this.pbMoon.Name = "pbMoon";
-            this.pbMoon.Size = new System.Drawing.Size(120, 120);
-            this.pbMoon.TabIndex = 0;
-            this.pbMoon.TabStop = false;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label24.Location = new System.Drawing.Point(84, 186);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(49, 13);
-            this.label24.TabIndex = 1;
-            this.label24.Text = "Sunrise";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label25.Location = new System.Drawing.Point(273, 186);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(46, 13);
-            this.label25.TabIndex = 1;
-            this.label25.Text = "Sunset";
-            // 
-            // lblSunrise
-            // 
-            this.lblSunrise.AutoSize = true;
-            this.lblSunrise.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSunrise.Location = new System.Drawing.Point(87, 245);
-            this.lblSunrise.Name = "lblSunrise";
-            this.lblSunrise.Size = new System.Drawing.Size(30, 13);
-            this.lblSunrise.TabIndex = 2;
-            this.lblSunrise.Text = "N/A";
-            // 
-            // lblSunset
-            // 
-            this.lblSunset.AutoSize = true;
-            this.lblSunset.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSunset.Location = new System.Drawing.Point(273, 245);
-            this.lblSunset.Name = "lblSunset";
-            this.lblSunset.Size = new System.Drawing.Size(30, 13);
-            this.lblSunset.TabIndex = 2;
-            this.lblSunset.Text = "N/A";
-            // 
             // bgwSunMoon
             // 
             this.bgwSunMoon.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwSunMoon_DoWork);
             this.bgwSunMoon.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwSunMoon_RunWorkerCompleted);
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.lblIlluminate);
-            this.groupBox7.Controls.Add(this.label28);
-            this.groupBox7.Controls.Add(this.lblMoonAge);
-            this.groupBox7.Controls.Add(this.label27);
-            this.groupBox7.Controls.Add(this.pbMoon);
-            this.groupBox7.Location = new System.Drawing.Point(32, 77);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(369, 230);
-            this.groupBox7.TabIndex = 1;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Moon Stage";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(182, 121);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(71, 13);
-            this.label27.TabIndex = 1;
-            this.label27.Text = "Age of Moon:";
-            // 
-            // lblMoonAge
-            // 
-            this.lblMoonAge.AutoSize = true;
-            this.lblMoonAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMoonAge.Location = new System.Drawing.Point(182, 143);
-            this.lblMoonAge.Name = "lblMoonAge";
-            this.lblMoonAge.Size = new System.Drawing.Size(30, 13);
-            this.lblMoonAge.TabIndex = 1;
-            this.lblMoonAge.Text = "N/A";
-            // 
-            // lblIlluminate
-            // 
-            this.lblIlluminate.AutoSize = true;
-            this.lblIlluminate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblIlluminate.Location = new System.Drawing.Point(182, 76);
-            this.lblIlluminate.Name = "lblIlluminate";
-            this.lblIlluminate.Size = new System.Drawing.Size(30, 13);
-            this.lblIlluminate.TabIndex = 2;
-            this.lblIlluminate.Text = "N/A";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(182, 54);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(118, 13);
-            this.label28.TabIndex = 3;
-            this.label28.Text = "Illuminated Percentage:";
             // 
             // MainForm
             // 
@@ -1049,6 +1050,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(742, 492);
             this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "A4Weather";
             this.gbSettings.ResumeLayout(false);
@@ -1066,24 +1068,24 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCurrent)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabRadar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbRadar)).EndInit();
             this.tabSatellite.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbSatellite)).EndInit();
             this.tabCombined.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbCombined)).EndInit();
             this.tabSun.ResumeLayout(false);
-            this.tabMoon.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCurrent)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRadar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSatellite)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCombined)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSunRise)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMoon)).EndInit();
+            this.tabMoon.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMoon)).EndInit();
             this.ResumeLayout(false);
 
         }
