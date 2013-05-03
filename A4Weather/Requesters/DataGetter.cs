@@ -80,5 +80,15 @@ namespace A4Weather.Requesters
             sunmoon.rawJson = json;
             return sunmoon;
         }
+
+        /**
+         * JSON getter of Date to Date data
+         * */
+        public HistoryData getHistoryData(String url)
+        {
+            var json = new WebClient().DownloadString(url);
+            HistoryData histdata = JsonConvert.DeserializeObject<HistoryData>(json);
+            return histdata;
+        }
     }
 }

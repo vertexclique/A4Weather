@@ -16,6 +16,9 @@ namespace A4Weather
 {
     public partial class MainForm : Form
     {
+
+        public static int selectedIndex = -1;
+
         public MainForm()
         {
             InitializeComponent();
@@ -35,7 +38,16 @@ namespace A4Weather
 
         private void btnCompare_Click(object sender, EventArgs e)
         {
-
+            if (cbCity.SelectedIndex <= -1)
+            {
+                MessageBox.Show("Please select city...", "City Selection");
+            }
+            else
+            {
+                selectedIndex = cbCity.SelectedIndex;
+                DateToDate dtd = new DateToDate();
+                dtd.ShowDialog(this);
+            }
         }
 
         private void tcWeather_SelectedIndexChanged(object sender, EventArgs e)

@@ -24,5 +24,22 @@ namespace A4Weather.Core
         public static String ISTANBUL_ANIMATED_COMBINED = "http://api.wunderground.com/api/" + API_KEY + "/animatedradar/animatedsatellite/q/Turkey/Istanbul.gif?num=15&delay=50&interval=30&rad.width=431&rad.height=431&sat.height=431&sat.width=431";
         public static String ISTANBUL_SUN_MOON = "http://api.wunderground.com/api/" + API_KEY + "/astronomy/q/Turkey/Istanbul.json";
 
+        public static String makeMariborHistory(int xyear, int xmonth, int xday)
+        {
+            String xmonthstr = ""+xmonth, xdaystr = ""+xday, baseUrl = "";
+            if (xmonth < 10) { xmonthstr = String.Concat("0", xmonth); }
+            if (xday < 10) { xdaystr = String.Concat("0", xday); }
+            baseUrl = "http://api.wunderground.com/api/" + API_KEY + "/history_" + xyear + xmonthstr + xdaystr + "/q/CA/Maribor.json";
+            return baseUrl;
+        }
+
+        public static String makeIstanbulHistory(int xyear, int xmonth, int xday)
+        {
+            String xmonthstr = ""+xmonth, xdaystr = ""+xday, baseUrl = "";
+            if (xmonth < 10) { xmonthstr = String.Concat("0",xmonth); }
+            if (xday < 10) { xdaystr = String.Concat("0", xday); }
+            baseUrl = "http://api.wunderground.com/api/" + API_KEY + "/history_" + xyear + xmonthstr + xdaystr + "/q/CA/Istanbul.json";
+            return baseUrl;
+        }
     }
 }
